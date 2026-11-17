@@ -26,7 +26,7 @@ async login(un:string,pw:string){
 }
 
 async verifySuccesFullLogin(){
-    await expect(this.page).toHaveURL("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
+    await expect(this.page).toHaveURL("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index" ,{ timeout: 30000 });
 }
 
 

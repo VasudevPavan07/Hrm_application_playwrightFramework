@@ -1,4 +1,4 @@
-import { Page, Locator } from "@playwright/test";
+import { Page, Locator, expect } from "@playwright/test";
 
 export class DashBoardPage{
 
@@ -14,6 +14,7 @@ readonly myinfolink:Locator;
 readonly performanceLink:Locator;
 readonly dashboardLink:Locator;
 readonly buzzLink:Locator;
+readonly menuToggle:Locator;
 
 
 
@@ -29,9 +30,9 @@ constructor(page:Page){
     this.recruitmentLink =page.locator("");
     this.timeLink =page.locator("");
     this.myinfolink = page.locator("");
-    this.buzzLink = page.locator("")
+    this.buzzLink = page.getByRole("link", { name: "Buzz", exact: true });
+    this.menuToggle = page.locator(".oxd-main-menu-button");
 }
-
 
 async logout(){
     await this.profileIcon.click();
@@ -40,6 +41,16 @@ async logout(){
 
 async gotoPim(){
     await this.pimlink.click();
+}
+
+async gotoBuzz(){
+    await expect(this.buzzLink).toBeAttached();
+    if (!(await this.buzzLink.isVisible())) {
+        await this.menuToggle.click();
+    }
+    await expect(this.buzzLink).toBeVisible();
+    await this.buzzLink.click();
+    await expect(this.page).toHaveURL(/\/buzz\/viewBuzz$/);
 }
 
 

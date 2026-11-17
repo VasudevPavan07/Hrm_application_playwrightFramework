@@ -1,6 +1,6 @@
 import { expect } from "@playwright/test";
 import { LoginPage } from "../ObjectRepository/LoginPage";
-import { DashBoardPage } from "../ObjectRepository/DashBoardPage'";
+import { DashBoardPage } from "../ObjectRepository/DashBoardPage";
 import { PimPage } from "../ObjectRepository/PimPage";
 import { AddEmployeePage } from "../ObjectRepository/AddEmployeePage";
 import { test } from "../fixtures/Loginfixture";

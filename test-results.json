@@ -4,8 +4,9 @@
       "C:\\Program Files\\nodejs\\node.exe",
       "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\node_modules\\@playwright\\test\\cli.js",
       "test",
-      "--headed",
-      "--project=chromium"
+      "tests/Buzz.spec.ts",
+      "--workers=1",
+      "--repeat-each=3"
     ],
     "configFile": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\playwright.config.ts",
     "rootDir": "C:/Users/DELL/Desktop/OrangeHrmAutomationPlayWrightFrameWork/tests",
@@ -25,7 +26,7 @@
     "projects": [
       {
         "outputDir": "C:/Users/DELL/Desktop/OrangeHrmAutomationPlayWrightFrameWork/test-results",
-        "repeatEach": 1,
+        "repeatEach": 3,
         "retries": 0,
         "metadata": {
           "actualWorkers": 1
@@ -41,7 +42,7 @@
       },
       {
         "outputDir": "C:/Users/DELL/Desktop/OrangeHrmAutomationPlayWrightFrameWork/test-results",
-        "repeatEach": 1,
+        "repeatEach": 3,
         "retries": 0,
         "metadata": {
           "actualWorkers": 1
@@ -57,7 +58,7 @@
       },
       {
         "outputDir": "C:/Users/DELL/Desktop/OrangeHrmAutomationPlayWrightFrameWork/test-results",
-        "repeatEach": 1,
+        "repeatEach": 3,
         "retries": 0,
         "metadata": {
           "actualWorkers": 1
@@ -77,7 +78,7 @@
         "grep": {},
         "grepInvert": null,
         "outputDir": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\test-results",
-        "repeatEach": 1,
+        "repeatEach": 3,
         "retries": 0,
         "metadata": {
           "actualWorkers": 1
@@ -103,12 +104,83 @@
           "deviceScaleFactor": 1,
           "isMobile": false,
           "hasTouch": false,
-          "defaultBrowserType": "chromium",
-          "headless": false
+          "defaultBrowserType": "chromium"
         },
         "dependencies": [],
         "ignoreSnapshots": false,
         "__projectId": "chromium"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\test-results",
+        "repeatEach": 3,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "firefox",
+        "testDir": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests",
+        "snapshotDir": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+          "trace": "on-first-retry",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "firefox"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "firefox"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\test-results",
+        "repeatEach": 3,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "webkit",
+        "testDir": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests",
+        "snapshotDir": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+          "trace": "on-first-retry",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit"
       }
     ],
     "quiet": false,
@@ -138,395 +210,507 @@
   },
   "suites": [
     {
-      "title": "AddEmployee.spec.ts",
-      "file": "AddEmployee.spec.ts",
+      "title": "Buzz.spec.ts",
+      "file": "Buzz.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [],
-      "suites": [
+      "specs": [
         {
-          "title": "Add employee test",
-          "file": "AddEmployee.spec.ts",
-          "line": 8,
-          "column": 6,
-          "specs": [
+          "title": "creates a Buzz post and deletes it",
+          "ok": true,
+          "tags": [],
+          "tests": [
             {
-              "title": "add an employee",
-              "ok": false,
-              "tags": [],
-              "tests": [
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
                 {
-                  "timeout": 30000,
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 29171,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T05:22:12.091Z",
                   "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ac6a632c79ccb7d7afd-557ed6a65c9e9a2267a6",
+          "file": "Buzz.spec.ts",
+          "line": 15,
+          "column": 5
+        },
+        {
+          "title": "creates a Buzz post and deletes it",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 28203,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.orangehrm-buzz-newsfeed-posts').locator('.oxd-grid-item').filter({ hasText: 'Automated Buzz post 1794892974879' })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.orangehrm-buzz-newsfeed-posts').locator('.oxd-grid-item').filter({ hasText: 'Automated Buzz post 1794892974879' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.orangehrm-buzz-newsfeed-posts').locator('.oxd-grid-item').filter({ hasText: 'Automated Buzz post 1794892974879' })\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.orangehrm-buzz-newsfeed-posts').locator('.oxd-grid-item').filter({ hasText: 'Automated Buzz post 1794892974879' })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.orangehrm-buzz-newsfeed-posts').locator('.oxd-grid-item').filter({ hasText: 'Automated Buzz post 1794892974879' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.orangehrm-buzz-newsfeed-posts').locator('.oxd-grid-item').filter({ hasText: 'Automated Buzz post 1794892974879' })\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n    at BuzzPage.deletePost (C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\ObjectRepository\\BuzzPage.ts:47:28)\n    at C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts:29:7",
+                    "location": {
+                      "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\ObjectRepository\\BuzzPage.ts",
+                      "column": 28,
+                      "line": 47
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\ObjectRepository\\BuzzPage.ts:47\n\n\u001b[0m \u001b[90m 45 |\u001b[39m       \u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/Yes, Delete/\u001b[39m })\n \u001b[90m 46 |\u001b[39m       \u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 47 |\u001b[39m     \u001b[36mawait\u001b[39m expect(postCard)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 48 |\u001b[39m   }\n \u001b[90m 49 |\u001b[39m }\n \u001b[90m 50 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 26772,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h6[text()=\\'Personal Details\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('//h6[text()=\\'Personal Details\\']') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h6[text()=\\'Personal Details\\']')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h6[text()=\\'Personal Details\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('//h6[text()=\\'Personal Details\\']') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h6[text()=\\'Personal Details\\']')\u001b[22m\n\n    at AddEmployeePage.verifySuccessfulSubmissionofEmpDetails (C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\ObjectRepository\\AddEmployeePage.ts:66:72)\n    at C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\AddEmployee.spec.ts:40:29",
-                        "location": {
-                          "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\ObjectRepository\\AddEmployeePage.ts",
-                          "column": 72,
-                          "line": 66
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\ObjectRepository\\AddEmployeePage.ts:66\n\n\u001b[0m \u001b[90m 64 |\u001b[39m\n \u001b[90m 65 |\u001b[39m \u001b[36masync\u001b[39m verifySuccessfulSubmissionofEmpDetails(){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m\"//h6[text()='Personal Details']\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 67 |\u001b[39m }\n \u001b[90m 68 |\u001b[39m\n \u001b[90m 69 |\u001b[39m }\u001b[0m"
+                      "location": {
+                        "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\ObjectRepository\\BuzzPage.ts",
+                        "column": 28,
+                        "line": 47
                       },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\ObjectRepository\\AddEmployeePage.ts",
-                            "column": 72,
-                            "line": 66
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('//h6[text()=\\'Personal Details\\']')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('//h6[text()=\\'Personal Details\\']') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//h6[text()=\\'Personal Details\\']')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\ObjectRepository\\AddEmployeePage.ts:66\n\n\u001b[0m \u001b[90m 64 |\u001b[39m\n \u001b[90m 65 |\u001b[39m \u001b[36masync\u001b[39m verifySuccessfulSubmissionofEmpDetails(){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m\"//h6[text()='Personal Details']\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 67 |\u001b[39m }\n \u001b[90m 68 |\u001b[39m\n \u001b[90m 69 |\u001b[39m }\u001b[0m\n\u001b[2m    at AddEmployeePage.verifySuccessfulSubmissionofEmpDetails (C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\ObjectRepository\\AddEmployeePage.ts:66:72)\u001b[22m\n\u001b[2m    at C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\AddEmployee.spec.ts:40:29\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-11-09T09:04:50.332Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\test-results\\AddEmployee-Add-employee-test-add-an-employee-chromium\\error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\ObjectRepository\\AddEmployeePage.ts",
-                        "column": 72,
-                        "line": 66
-                      }
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.orangehrm-buzz-newsfeed-posts').locator('.oxd-grid-item').filter({ hasText: 'Automated Buzz post 1794892974879' })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.orangehrm-buzz-newsfeed-posts').locator('.oxd-grid-item').filter({ hasText: 'Automated Buzz post 1794892974879' }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.orangehrm-buzz-newsfeed-posts').locator('.oxd-grid-item').filter({ hasText: 'Automated Buzz post 1794892974879' })\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\ObjectRepository\\BuzzPage.ts:47\n\n\u001b[0m \u001b[90m 45 |\u001b[39m       \u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/Yes, Delete/\u001b[39m })\n \u001b[90m 46 |\u001b[39m       \u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 47 |\u001b[39m     \u001b[36mawait\u001b[39m expect(postCard)\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 48 |\u001b[39m   }\n \u001b[90m 49 |\u001b[39m }\n \u001b[90m 50 |\u001b[39m\u001b[0m\n\u001b[2m    at BuzzPage.deletePost (C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\ObjectRepository\\BuzzPage.ts:47:28)\u001b[22m\n\u001b[2m    at C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts:29:7\u001b[22m"
                     }
                   ],
-                  "status": "unexpected"
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T05:22:44.259Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\test-results\\Buzz-creates-a-Buzz-post-and-deletes-it-chromium-repeat1\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\ObjectRepository\\BuzzPage.ts",
+                    "column": 28,
+                    "line": 47
+                  }
                 }
               ],
-              "id": "bff171b859dea43fd051-b4e1b5962c515af279cb",
-              "file": "AddEmployee.spec.ts",
-              "line": 21,
-              "column": 7
+              "status": "unexpected"
             }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "DynamicLoginTest.spec.ts",
-      "file": "DynamicLoginTest.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
+          ],
+          "id": "9ac6a632c79ccb7d7afd-44c76c4f8a5d9cd9661b",
+          "file": "Buzz.spec.ts",
+          "line": 15,
+          "column": 5
+        },
         {
-          "title": "dynamic login test",
-          "file": "DynamicLoginTest.spec.ts",
-          "line": 4,
-          "column": 6,
-          "specs": [
+          "title": "creates a Buzz post and deletes it",
+          "ok": true,
+          "tags": [],
+          "tests": [
             {
-              "title": "user login tesst",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
                 {
-                  "timeout": 30000,
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 22102,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T05:23:13.215Z",
                   "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 7488,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-11-09T09:05:19.812Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "attachments": []
                 }
               ],
-              "id": "03b1bea8223c1419cd31-071018236e5162b3d63e",
-              "file": "DynamicLoginTest.spec.ts",
-              "line": 8,
-              "column": 9
+              "status": "expected"
             }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "LoginTest.spec.ts",
-      "file": "LoginTest.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
+          ],
+          "id": "9ac6a632c79ccb7d7afd-ae12a3c438482abdd6eb",
+          "file": "Buzz.spec.ts",
+          "line": 15,
+          "column": 5
+        },
         {
-          "title": "login test",
-          "file": "LoginTest.spec.ts",
-          "line": 4,
-          "column": 6,
-          "specs": [
+          "title": "creates a Buzz post and deletes it",
+          "ok": false,
+          "tags": [],
+          "tests": [
             {
-              "title": "login test for  users Admin",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 20007,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893026789', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893026789', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893026789', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893026789', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893026789', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893026789', { exact: true })\u001b[22m\n\n    at C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts:25:50",
+                    "location": {
+                      "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts",
+                      "column": 50,
+                      "line": 25
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 23 |\u001b[39m     cleanupNeeded \u001b[33m=\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m buzzPage\u001b[33m.\u001b[39mcreatePost(postText)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mgetPostBody(postText))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mpostBodies\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoHaveText(postText)\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m   } \u001b[36mfinally\u001b[39m {\n \u001b[90m 28 |\u001b[39m     \u001b[36mif\u001b[39m (cleanupNeeded) {\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 9012,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-11-09T09:05:27.850Z",
-                      "annotations": [],
-                      "attachments": []
+                      "location": {
+                        "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts",
+                        "column": 50,
+                        "line": 25
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893026789', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893026789', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893026789', { exact: true })\u001b[22m\n\n\n\u001b[0m \u001b[90m 23 |\u001b[39m     cleanupNeeded \u001b[33m=\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m buzzPage\u001b[33m.\u001b[39mcreatePost(postText)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mgetPostBody(postText))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mpostBodies\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoHaveText(postText)\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m   } \u001b[36mfinally\u001b[39m {\n \u001b[90m 28 |\u001b[39m     \u001b[36mif\u001b[39m (cleanupNeeded) {\u001b[0m\n\u001b[2m    at C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts:25:50\u001b[22m"
                     }
                   ],
-                  "status": "expected"
-                }
-              ],
-              "id": "539b1c6d7fcc511d6019-4d3e21a3cd64b09adeed",
-              "file": "LoginTest.spec.ts",
-              "line": 25,
-              "column": 9
-            },
-            {
-              "title": "login test for  users admin123",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T05:23:36.039Z",
                   "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "attachments": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 6648,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-11-09T09:05:36.893Z",
-                      "annotations": [],
-                      "attachments": []
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\test-results\\Buzz-creates-a-Buzz-post-and-deletes-it-firefox\\error-context.md"
                     }
                   ],
-                  "status": "expected"
+                  "errorLocation": {
+                    "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts",
+                    "column": 50,
+                    "line": 25
+                  }
                 }
               ],
-              "id": "539b1c6d7fcc511d6019-7c9db625186f6c7ef155",
-              "file": "LoginTest.spec.ts",
-              "line": 25,
-              "column": 9
-            },
-            {
-              "title": "login test for  users ",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 5830,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-11-09T09:05:43.586Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "539b1c6d7fcc511d6019-6ff5ddc748fa5eb1e28a",
-              "file": "LoginTest.spec.ts",
-              "line": 25,
-              "column": 9
+              "status": "unexpected"
             }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "LoginTestJsonddt.spec.ts",
-      "file": "LoginTestJsonddt.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
+          ],
+          "id": "9ac6a632c79ccb7d7afd-047e5f3e3a30e28cb84e",
+          "file": "Buzz.spec.ts",
+          "line": 15,
+          "column": 5
+        },
         {
-          "title": "json login test",
-          "file": "LoginTestJsonddt.spec.ts",
-          "line": 8,
-          "column": 6,
-          "specs": [
+          "title": "creates a Buzz post and deletes it",
+          "ok": false,
+          "tags": [],
+          "tests": [
             {
-              "title": " login test for Admin",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 22973,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893049705', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893049705', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893049705', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893049705', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893049705', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893049705', { exact: true })\u001b[22m\n\n    at C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts:25:50",
+                    "location": {
+                      "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts",
+                      "column": 50,
+                      "line": 25
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 23 |\u001b[39m     cleanupNeeded \u001b[33m=\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m buzzPage\u001b[33m.\u001b[39mcreatePost(postText)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mgetPostBody(postText))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mpostBodies\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoHaveText(postText)\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m   } \u001b[36mfinally\u001b[39m {\n \u001b[90m 28 |\u001b[39m     \u001b[36mif\u001b[39m (cleanupNeeded) {\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 440,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "admin123 Admin\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-11-09T09:05:49.517Z",
-                      "annotations": [],
-                      "attachments": []
+                      "location": {
+                        "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts",
+                        "column": 50,
+                        "line": 25
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893049705', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893049705', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893049705', { exact: true })\u001b[22m\n\n\n\u001b[0m \u001b[90m 23 |\u001b[39m     cleanupNeeded \u001b[33m=\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m buzzPage\u001b[33m.\u001b[39mcreatePost(postText)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mgetPostBody(postText))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mpostBodies\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoHaveText(postText)\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m   } \u001b[36mfinally\u001b[39m {\n \u001b[90m 28 |\u001b[39m     \u001b[36mif\u001b[39m (cleanupNeeded) {\u001b[0m\n\u001b[2m    at C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts:25:50\u001b[22m"
                     }
                   ],
-                  "status": "expected"
-                }
-              ],
-              "id": "56b8adb91d9392bf3238-7edfe28c6abfd91438ae",
-              "file": "LoginTestJsonddt.spec.ts",
-              "line": 12,
-              "column": 9
-            },
-            {
-              "title": " login test for admin",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T05:23:58.264Z",
                   "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "attachments": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 609,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Admin123 admin\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-11-09T09:05:50.003Z",
-                      "annotations": [],
-                      "attachments": []
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\test-results\\Buzz-creates-a-Buzz-post-and-deletes-it-firefox-repeat1\\error-context.md"
                     }
                   ],
-                  "status": "expected"
+                  "errorLocation": {
+                    "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts",
+                    "column": 50,
+                    "line": 25
+                  }
                 }
               ],
-              "id": "56b8adb91d9392bf3238-be557da9ecd2cfd42b6e",
-              "file": "LoginTestJsonddt.spec.ts",
-              "line": 12,
-              "column": 9
-            },
-            {
-              "title": " login test for  ",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 469,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "   \n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-11-09T09:05:50.655Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "56b8adb91d9392bf3238-ef3d41b5f56b0f71d5e1",
-              "file": "LoginTestJsonddt.spec.ts",
-              "line": 12,
-              "column": 9
+              "status": "unexpected"
             }
-          ]
+          ],
+          "id": "9ac6a632c79ccb7d7afd-04ca7c375e931731e506",
+          "file": "Buzz.spec.ts",
+          "line": 15,
+          "column": 5
+        },
+        {
+          "title": "creates a Buzz post and deletes it",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 23612,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T05:24:23.179Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9ac6a632c79ccb7d7afd-de35345f69c236f45028",
+          "file": "Buzz.spec.ts",
+          "line": 15,
+          "column": 5
+        },
+        {
+          "title": "creates a Buzz post and deletes it",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 20635,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893099398', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893099398', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893099398', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893099398', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893099398', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893099398', { exact: true })\u001b[22m\n\n    at C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts:25:50",
+                    "location": {
+                      "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts",
+                      "column": 50,
+                      "line": 25
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 23 |\u001b[39m     cleanupNeeded \u001b[33m=\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m buzzPage\u001b[33m.\u001b[39mcreatePost(postText)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mgetPostBody(postText))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mpostBodies\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoHaveText(postText)\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m   } \u001b[36mfinally\u001b[39m {\n \u001b[90m 28 |\u001b[39m     \u001b[36mif\u001b[39m (cleanupNeeded) {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts",
+                        "column": 50,
+                        "line": 25
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893099398', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893099398', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893099398', { exact: true })\u001b[22m\n\n\n\u001b[0m \u001b[90m 23 |\u001b[39m     cleanupNeeded \u001b[33m=\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m buzzPage\u001b[33m.\u001b[39mcreatePost(postText)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mgetPostBody(postText))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mpostBodies\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoHaveText(postText)\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m   } \u001b[36mfinally\u001b[39m {\n \u001b[90m 28 |\u001b[39m     \u001b[36mif\u001b[39m (cleanupNeeded) {\u001b[0m\n\u001b[2m    at C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts:25:50\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T05:24:48.518Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\test-results\\Buzz-creates-a-Buzz-post-and-deletes-it-webkit\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts",
+                    "column": 50,
+                    "line": 25
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9ac6a632c79ccb7d7afd-d2be1d2d8a904c384c8a",
+          "file": "Buzz.spec.ts",
+          "line": 15,
+          "column": 5
+        },
+        {
+          "title": "creates a Buzz post and deletes it",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 19437,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893117388', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893117388', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893117388', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893117388', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893117388', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893117388', { exact: true })\u001b[22m\n\n    at C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts:25:50",
+                    "location": {
+                      "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts",
+                      "column": 50,
+                      "line": 25
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 23 |\u001b[39m     cleanupNeeded \u001b[33m=\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m buzzPage\u001b[33m.\u001b[39mcreatePost(postText)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mgetPostBody(postText))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mpostBodies\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoHaveText(postText)\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m   } \u001b[36mfinally\u001b[39m {\n \u001b[90m 28 |\u001b[39m     \u001b[36mif\u001b[39m (cleanupNeeded) {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts",
+                        "column": 50,
+                        "line": 25
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893117388', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893117388', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893117388', { exact: true })\u001b[22m\n\n\n\u001b[0m \u001b[90m 23 |\u001b[39m     cleanupNeeded \u001b[33m=\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m buzzPage\u001b[33m.\u001b[39mcreatePost(postText)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mgetPostBody(postText))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mpostBodies\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoHaveText(postText)\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m   } \u001b[36mfinally\u001b[39m {\n \u001b[90m 28 |\u001b[39m     \u001b[36mif\u001b[39m (cleanupNeeded) {\u001b[0m\n\u001b[2m    at C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts:25:50\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T05:25:10.039Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\test-results\\Buzz-creates-a-Buzz-post-and-deletes-it-webkit-repeat1\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts",
+                    "column": 50,
+                    "line": 25
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9ac6a632c79ccb7d7afd-33d3c9a4aed1acb73dc1",
+          "file": "Buzz.spec.ts",
+          "line": 15,
+          "column": 5
+        },
+        {
+          "title": "creates a Buzz post and deletes it",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 22413,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893138058', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893138058', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893138058', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893138058', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893138058', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893138058', { exact: true })\u001b[22m\n\n    at C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts:25:50",
+                    "location": {
+                      "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts",
+                      "column": 50,
+                      "line": 25
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 23 |\u001b[39m     cleanupNeeded \u001b[33m=\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m buzzPage\u001b[33m.\u001b[39mcreatePost(postText)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mgetPostBody(postText))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mpostBodies\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoHaveText(postText)\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m   } \u001b[36mfinally\u001b[39m {\n \u001b[90m 28 |\u001b[39m     \u001b[36mif\u001b[39m (cleanupNeeded) {\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts",
+                        "column": 50,
+                        "line": 25
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893138058', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893138058', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.orangehrm-buzz-newsfeed-posts').getByText('Automated Buzz post 1794893138058', { exact: true })\u001b[22m\n\n\n\u001b[0m \u001b[90m 23 |\u001b[39m     cleanupNeeded \u001b[33m=\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m buzzPage\u001b[33m.\u001b[39mcreatePost(postText)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mgetPostBody(postText))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(buzzPage\u001b[33m.\u001b[39mpostBodies\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoHaveText(postText)\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m   } \u001b[36mfinally\u001b[39m {\n \u001b[90m 28 |\u001b[39m     \u001b[36mif\u001b[39m (cleanupNeeded) {\u001b[0m\n\u001b[2m    at C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts:25:50\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-17T05:25:30.209Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\test-results\\Buzz-creates-a-Buzz-post-and-deletes-it-webkit-repeat2\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\DELL\\Desktop\\OrangeHrmAutomationPlayWrightFrameWork\\tests\\Buzz.spec.ts",
+                    "column": 50,
+                    "line": 25
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9ac6a632c79ccb7d7afd-31eb0f3a6ab7b6ff2549",
+          "file": "Buzz.spec.ts",
+          "line": 15,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-09T09:04:49.551Z",
-    "duration": 62155.827,
-    "expected": 7,
+    "startTime": "2026-11-17T05:22:10.761Z",
+    "duration": 222237.306,
+    "expected": 3,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 6,
     "flaky": 0
   }
 }

@@ -1,6 +1,6 @@
 import {test as base ,Page ,expect} from "@playwright/test"
 import { LoginPage } from './../ObjectRepository/LoginPage';
-import { DashBoardPage } from "../ObjectRepository/DashBoardPage'";
+import { DashBoardPage } from "../ObjectRepository/DashBoardPage";
 
 type Myfixture ={
 
