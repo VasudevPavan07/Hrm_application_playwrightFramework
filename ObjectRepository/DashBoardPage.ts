@@ -27,11 +27,11 @@ constructor(page:Page){
     this.dashboardLink = page.locator("");
     this.performanceLink = page.locator("");
     this.leaveLink = page.locator("");
-    this.recruitmentLink =page.locator("");
+    this.recruitmentLink = page.getByRole("link", { name: "Recruitment", exact: true });
     this.timeLink =page.locator("");
     this.myinfolink = page.locator("");
     this.buzzLink = page.getByRole("link", { name: "Buzz", exact: true });
-    this.menuToggle = page.locator(".oxd-main-menu-button");
+    this.menuToggle = page.locator(".oxd-topbar-header-hamburger");
 }
 
 async logout(){
@@ -51,6 +51,16 @@ async gotoBuzz(){
     await expect(this.buzzLink).toBeVisible();
     await this.buzzLink.click();
     await expect(this.page).toHaveURL(/\/buzz\/viewBuzz$/);
+}
+
+async gotoRecruitment(){
+    await expect(this.recruitmentLink).toBeAttached();
+    if (!(await this.recruitmentLink.isVisible())) {
+        await this.menuToggle.click();
+    }
+    await expect(this.recruitmentLink).toBeVisible();
+    await this.recruitmentLink.click();
+    await expect(this.page).toHaveURL(/\/recruitment\/viewCandidates$/);
 }
 
 

@@ -1,0 +1,8 @@
+{
+  "vacancyNamePrefix": "Automated Vacancy",
+  "jobTitle": "Software Engineer",
+  "description": "Automated vacancy test description",
+  "hiringManagerQuery": "John Test",
+  "hiringManager": "John Test Automation",
+  "numberOfPositions": "2"
+}
